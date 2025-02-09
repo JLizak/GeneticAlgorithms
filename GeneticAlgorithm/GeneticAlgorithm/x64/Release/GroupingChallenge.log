@@ -1,0 +1,16 @@
+﻿  RandomResettingMutation.h
+  TournamentSelection.h
+C:\Users\stoli\Desktop\GroupingChallenge\GroupingChallenge\PopulationPool.h(57,26): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'TournamentSelection.h')
+  
+C:\Users\stoli\Desktop\GroupingChallenge\GroupingChallenge\TournamentSelection.h(15,65): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+C:\Users\stoli\Desktop\GroupingChallenge\GroupingChallenge\TournamentSelection.h(15,65): warning C4267:         with
+C:\Users\stoli\Desktop\GroupingChallenge\GroupingChallenge\TournamentSelection.h(15,65): warning C4267:         [
+C:\Users\stoli\Desktop\GroupingChallenge\GroupingChallenge\TournamentSelection.h(15,65): warning C4267:             _Ty=int
+C:\Users\stoli\Desktop\GroupingChallenge\GroupingChallenge\TournamentSelection.h(15,65): warning C4267:         ]
+  Generating code
+  0 of 1065 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  GroupingChallenge.vcxproj -> C:\Users\stoli\Desktop\GroupingChallenge\x64\Release\GroupingChallenge.exe
