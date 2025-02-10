@@ -6,7 +6,7 @@ namespace GA {
 	class RandomIndividualFactory : public IIndividualFactory{
 	public:
 
-		Individual createIndividual(SmartPointer<Evaluator> evaluator, mt19937& randomEngine) override {
+		Individual createIndividual(shared_ptr<Evaluator> evaluator, mt19937& randomEngine) override {
 			uniform_int_distribution<int> geneDistribution(evaluator->iGetLowerBound(), evaluator->iGetUpperBound());
 
 			vector<int> chromosome(evaluator->iGetNumberOfPoints());

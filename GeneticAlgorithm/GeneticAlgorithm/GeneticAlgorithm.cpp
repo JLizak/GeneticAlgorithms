@@ -6,12 +6,12 @@ using namespace GA;
 GeneticAlgorithm::~GeneticAlgorithm() {
 }
 
-GeneticAlgorithm::GeneticAlgorithm(SmartPointer<Evaluator> evaluator, mt19937 randomEngine,
+GeneticAlgorithm::GeneticAlgorithm(shared_ptr<Evaluator> evaluator, mt19937 randomEngine,
 	GeneticOperators GOperators, GeneticAlgorithmParameters GParams) :
      evaluator(evaluator), randomEngine (randomEngine) {
 	operators = GOperators;
 	parameters = GParams;
-	population = SmartPointer<PopulationPool>(new PopulationPool(operators.initialization, operators.survival,
+	population = shared_ptr<PopulationPool>(new PopulationPool(operators.initialization, operators.survival,
 		parameters.populationSize, evaluator, randomEngine));
 
 }

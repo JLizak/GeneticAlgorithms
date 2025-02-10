@@ -7,8 +7,8 @@ namespace GA {
 	class IGeneticAlgorithm {
 	public:
 		virtual void runIteration() = 0;
-
 		virtual void initialize() = 0;
+
 		virtual vector<Individual>  select() = 0;
 		virtual vector<Individual> cross(Individual& parent1, Individual& parent2) = 0;
 		virtual void mutate(Individual& individual) = 0;

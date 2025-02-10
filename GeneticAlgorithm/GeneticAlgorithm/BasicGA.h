@@ -7,7 +7,7 @@ namespace GA {
 	private:
 		
 	public:
-		BasicGA(SmartPointer<Evaluator> evaluator, mt19937 randomEngine,
+		BasicGA(shared_ptr<Evaluator> evaluator, mt19937 randomEngine,
 			GeneticOperators GOperators, GeneticAlgorithmParameters GParams);
 		
 		void runIteration() override;

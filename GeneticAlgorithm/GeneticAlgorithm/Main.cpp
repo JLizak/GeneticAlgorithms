@@ -1,6 +1,5 @@
 #include "GaussianGroupingEvaluatorFactory.h"
-#include "GroupingEvaluator.h"
-#include "Optimizer.h"
+#include "EvolutionSimulator.h"
 
 using namespace GA;
 

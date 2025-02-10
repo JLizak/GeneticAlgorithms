@@ -1,7 +1,6 @@
 #ifndef OPTIMIZER_H
 #define OPTIMIZER_H
 
-#include "GroupingEvaluator.h"
 #include "Individual.h"
 #include "Evaluator.h"
 #include <iostream>
@@ -12,12 +11,10 @@
 #include "TournamentSelection.h"
 #include "UniformCrossover.h"
 #include "MutationStrategy.h"
-#include "Island.h"
 #include "AdaptiveMutation.h"
 #include "RandomResettingMutation.h"
 #include <thread>
 #include "GeneticAlgorithm.h"
-#include "IslandsGA.h"
 #include "ElitismSurvival.h"
 #include "BasicGA.h"
 
@@ -43,13 +40,13 @@ namespace GA
 		double d_current_best_fitness;
 		vector<int> v_current_best;
 
-		SmartPointer<Evaluator> evaluator;
+		shared_ptr<Evaluator> evaluator;
 
-		SmartPointer<SelectionStrategy> selection;
-		SmartPointer<CrossoverStrategy> crossover;
-		SmartPointer<MutationStrategy> mutation;
-		SmartPointer<InitializationStrategy> initialization;
-		SmartPointer<SurvivalStrategy> survival;
+		shared_ptr<SelectionStrategy> selection;
+		shared_ptr<CrossoverStrategy> crossover;
+		shared_ptr<MutationStrategy> mutation;
+		shared_ptr<InitializationStrategy> initialization;
+		shared_ptr<SurvivalStrategy> survival;
 
 		GeneticAlgorithmParameters params;
 		GeneticOperators operators;

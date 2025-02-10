@@ -1,6 +1,5 @@
 #include "Evaluator.h"
 #include <cmath>
-#include "Island.h" 
 using namespace GA;
 
 Evaluator::Evaluator(int iNumberOfGroups, const std::vector<CPoint>& vPoints)

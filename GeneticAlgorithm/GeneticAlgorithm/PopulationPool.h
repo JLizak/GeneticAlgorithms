@@ -3,6 +3,8 @@
 #include "Individual.h"
 #include "RandomInitialization.h"
 #include "SurvivalStrategy.h"
+#include <memory>
+
 
 namespace GA {
 	class PopulationPool {
@@ -13,14 +15,14 @@ namespace GA {
 		Individual bestIndividual;
 		double bestFitness;
 
-		SmartPointer<InitializationStrategy> initialization;
-		SmartPointer<SurvivalStrategy> survival;
-		SmartPointer<Evaluator> evaluator;
+		shared_ptr<InitializationStrategy> initialization;
+		shared_ptr<SurvivalStrategy> survival;
+		shared_ptr<Evaluator> evaluator;
 		mt19937& randomEngine;
 
 		
 	public:
-		PopulationPool(SmartPointer<InitializationStrategy> init, SmartPointer<SurvivalStrategy> surviv, int populationSize, SmartPointer<Evaluator> evaluator,
+		PopulationPool(shared_ptr<InitializationStrategy> init, shared_ptr<SurvivalStrategy> surviv, int populationSize, shared_ptr<Evaluator> evaluator,
 		mt19937& randomEngine): randomEngine(randomEngine) {
 			population = vector<Individual>(populationSize);
 			this->populationSize = populationSize;
@@ -30,7 +32,7 @@ namespace GA {
 			survival = surviv;
 		}
 
-		PopulationPool(SmartPointer<InitializationStrategy> init, SmartPointer<SurvivalStrategy> surviv, int populationSize, SmartPointer<Evaluator> evaluator,
+		PopulationPool(shared_ptr<InitializationStrategy> init, shared_ptr<SurvivalStrategy> surviv, int populationSize, shared_ptr<Evaluator> evaluator,
 			mt19937& randomEngine, vector<Individual> pop) : randomEngine(randomEngine) {
 			population = vector<Individual>(populationSize);
 			this->populationSize = populationSize;
@@ -79,7 +81,7 @@ namespace GA {
 			return population.size();
 		}
 
-		SmartPointer<PopulationPool> getPopulationFragment(int begin, int end) {
+		shared_ptr<PopulationPool> getPopulationFragment(int begin, int end) {
 			int newPopulationSize = end - begin;
 			vector<Individual> newPopulation(newPopulationSize);
 
@@ -87,7 +89,7 @@ namespace GA {
 				newPopulation[i] = population[begin + i].copy();
 			}
 
-			return SmartPointer<PopulationPool>(new PopulationPool(initialization, survival, 
+			return shared_ptr<PopulationPool>(new PopulationPool(initialization, survival,
 				newPopulationSize, evaluator, randomEngine, newPopulation));
 		}
 

@@ -1,23 +1,22 @@
 #pragma once
 
 #include "InitializationStrategy.h"
-#include "SmartPtr.h"
 #include "RandomIndividualFactory.h"
 
 namespace GA {
 	class RandomInitialization : public InitializationStrategy {
     private:
-        SmartPointer<RandomIndividualFactory> individualFactory;
-        SmartPointer<Evaluator> evaluator;
+        shared_ptr<RandomIndividualFactory> individualFactory;
+        shared_ptr<Evaluator> evaluator;
         mt19937& randomEngine;
         double bestFitness;
         Individual bestIndividual;
 
 	public:
-		RandomInitialization(SmartPointer<Evaluator> evaluator, mt19937& randomEngine) : 
+		RandomInitialization(shared_ptr<Evaluator> evaluator, mt19937& randomEngine) : 
         randomEngine(randomEngine) {
             this->evaluator = evaluator;
-            individualFactory = SmartPointer<RandomIndividualFactory>(new RandomIndividualFactory);
+            individualFactory = shared_ptr<RandomIndividualFactory>(new RandomIndividualFactory);
             bestFitness = numeric_limits<double>::max();
 		}
 

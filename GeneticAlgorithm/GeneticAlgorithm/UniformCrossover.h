@@ -3,12 +3,11 @@
 
 #include "CrossoverStrategy.h"
 #include <random>
-#include "SmartPtr.h"
 
 namespace GA {
 	class UniformCrossover : public CrossoverStrategy {
 	public:
-		UniformCrossover(mt19937 randomEngine, SmartPointer<Evaluator> evaluator) : evaluator(evaluator) {
+		UniformCrossover(mt19937 randomEngine, shared_ptr<Evaluator> evaluator) : evaluator(evaluator) {
             this->c_random_engine = mt19937(randomEngine);
         }
 
@@ -41,7 +40,7 @@ namespace GA {
 
 	private:
 		mt19937 c_random_engine;
-        SmartPointer<Evaluator> evaluator;
+        shared_ptr<Evaluator> evaluator;
 	};
 }
 

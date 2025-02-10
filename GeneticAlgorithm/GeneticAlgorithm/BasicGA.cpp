@@ -2,7 +2,7 @@
 
 using namespace GA;
 
-BasicGA::BasicGA(SmartPointer<Evaluator> evaluator, mt19937 randomEngine,
+BasicGA::BasicGA(shared_ptr<Evaluator> evaluator, mt19937 randomEngine,
 	GeneticOperators GOperators, GeneticAlgorithmParameters GParams) :
 	GeneticAlgorithm(evaluator, randomEngine, GOperators, GParams) {
 }

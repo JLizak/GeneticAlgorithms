@@ -3,7 +3,7 @@
 #include "IGeneticAlgorithm.h"
 #include "Individual.h"
 #include "Evaluator.h"
-#include "SmartPtr.h"
+
 #include "SelectionStrategy.h"
 #include "CrossoverStrategy.h"
 #include "MutationStrategy.h"
@@ -24,11 +24,11 @@ namespace GA {
 	};
 
 	struct GeneticOperators {
-		SmartPointer<SelectionStrategy> selection;
-		SmartPointer<CrossoverStrategy> crossover;
-		SmartPointer<MutationStrategy> mutation;
-		SmartPointer<InitializationStrategy> initialization;
-		SmartPointer<SurvivalStrategy> survival;
+		shared_ptr<SelectionStrategy> selection;
+		shared_ptr<CrossoverStrategy> crossover;
+		shared_ptr<MutationStrategy> mutation;
+		shared_ptr<InitializationStrategy> initialization;
+		shared_ptr<SurvivalStrategy> survival;
 	};
 
 
@@ -36,13 +36,13 @@ namespace GA {
 	protected:
 		mt19937 randomEngine;
 		int generationCount;
-		SmartPointer<Evaluator> evaluator;
-		SmartPointer<PopulationPool> population;
+		shared_ptr<Evaluator> evaluator;
+		shared_ptr<PopulationPool> population;
 		GeneticAlgorithmParameters parameters;
 		GeneticOperators operators;
 
 	public:
-		GeneticAlgorithm(SmartPointer<Evaluator> evaluator, mt19937 randomEngine, 
+		GeneticAlgorithm(shared_ptr<Evaluator> evaluator, mt19937 randomEngine,
 			GeneticOperators GOperators, GeneticAlgorithmParameters GParams);
 
 		~GeneticAlgorithm() override;

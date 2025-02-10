@@ -1,4 +1,4 @@
-﻿#include "Optimizer.h"
+﻿#include "EvolutionSimulator.h"
 
 
 using namespace GA;
@@ -18,13 +18,13 @@ COptimizer::COptimizer(Evaluator& cEvaluator)
 	int TOURNAMENT_SIZE = 2;
 	double ELITE_RATE = 0.01;
 
-	evaluator = SmartPointer<Evaluator>(new Evaluator(c_evaluator.iGetUpperBound(), c_evaluator.vGetPoints()));
-	selection = SmartPointer<SelectionStrategy>(new TournamentSelection(TOURNAMENT_SIZE, c_random_engine));
-	crossover = SmartPointer<CrossoverStrategy>(new UniformCrossover(c_random_engine, evaluator));
-	mutation = SmartPointer<MutationStrategy>(new AdaptiveMutation(cEvaluator.iGetLowerBound(), 
+	evaluator = shared_ptr<Evaluator>(new Evaluator(c_evaluator.iGetUpperBound(), c_evaluator.vGetPoints()));
+	selection = shared_ptr<SelectionStrategy>(new TournamentSelection(TOURNAMENT_SIZE, c_random_engine));
+	crossover = shared_ptr<CrossoverStrategy>(new UniformCrossover(c_random_engine, evaluator));
+	mutation = shared_ptr<MutationStrategy>(new AdaptiveMutation(cEvaluator.iGetLowerBound(), 
 		cEvaluator.iGetUpperBound(), c_random_engine));
-	initialization = SmartPointer<InitializationStrategy>(new RandomInitialization(evaluator, c_random_engine));
-	survival = SmartPointer<SurvivalStrategy>(new ElitismSurvival(ELITE_RATE, c_random_engine));
+	initialization = shared_ptr<InitializationStrategy>(new RandomInitialization(evaluator, c_random_engine));
+	survival = shared_ptr<SurvivalStrategy>(new ElitismSurvival(ELITE_RATE, c_random_engine));
 
 	params.populationSize = POPULATION_SIZE;
 	params.crossoverRate = CROSSOVER_RATE;

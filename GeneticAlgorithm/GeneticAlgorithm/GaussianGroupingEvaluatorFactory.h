@@ -1,7 +1,6 @@
 #ifndef GAUSSIAN_GROUPING_EVALUATOR_FACTORY_H
 #define GAUSSIAN_GROUPING_EVALUATOR_FACTORY_H
 
-#include "GroupingEvaluator.h"
 #include "Evaluator.h"
 #include "Point.h"
 
