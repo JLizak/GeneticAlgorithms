@@ -1,5 +1,9 @@
 ﻿  BasicGA.cpp
+<<<<<<< HEAD
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+=======
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+>>>>>>> 1c546babad4cc7caba9cdd2a6585f7018ae37c49
   (kompilowanie pliku źródłowego „BasicGA.cpp”)
   
   Evaluator.cpp
@@ -8,6 +12,7 @@ C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Populat
   
   GaussianGroupingEvaluatorFactory.cpp
   GeneticAlgorithm.cpp
+<<<<<<< HEAD
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
   (kompilowanie pliku źródłowego „GeneticAlgorithm.cpp”)
   
@@ -38,9 +43,45 @@ C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Elitism
   
   Island.cpp
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+=======
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „GeneticAlgorithm.cpp”)
+  
+  GeneticAlgorithmTester.cpp
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „GeneticAlgorithmTester.cpp”)
+  
+  GroupingChallenge.cpp
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „GroupingChallenge.cpp”)
+  
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267: "argument": konwersja z "size_t" do "_Ty", możliwa utrata danych
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267:         with
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267:         [
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267:             _Ty=int
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267:         ]
+  (kompilowanie pliku źródłowego „GroupingChallenge.cpp”)
+  
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267: "argument": konwersja z "size_t" do "_Ty", możliwa utrata danych
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267:         with
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267:         [
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267:             _Ty=int
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267:         ]
+  (kompilowanie pliku źródłowego „GroupingChallenge.cpp”)
+  
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(22,18): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „GroupingChallenge.cpp”)
+  
+  GroupingEvaluator.cpp
+  Individual.cpp
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\Individual.cpp(27,24): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+  Island.cpp
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+>>>>>>> 1c546babad4cc7caba9cdd2a6585f7018ae37c49
   (kompilowanie pliku źródłowego „Island.cpp”)
   
   Optimizer.cpp
+<<<<<<< HEAD
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
   (kompilowanie pliku źródłowego „Optimizer.cpp”)
   
@@ -65,3 +106,31 @@ C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Optimiz
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Optimizer.cpp(31,24): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
   Generowanie kodu...
   GeneticAlgorithm.vcxproj -> C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\x64\Debug\GeneticAlgorithm.exe
+=======
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(79,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „Optimizer.cpp”)
+  
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267: "argument": konwersja z "size_t" do "_Ty", możliwa utrata danych
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267:         with
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267:         [
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267:             _Ty=int
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267:         ]
+  (kompilowanie pliku źródłowego „Optimizer.cpp”)
+  
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267: "argument": konwersja z "size_t" do "_Ty", możliwa utrata danych
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267:         with
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267:         [
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267:             _Ty=int
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(15,59): warning C4267:         ]
+  (kompilowanie pliku źródłowego „Optimizer.cpp”)
+  
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(22,18): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „Optimizer.cpp”)
+  
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\Optimizer.cpp(30,25): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Jeremi\source\repos\GeneticAlgorithms\GeneticAlgorithm\GeneticAlgorithm\Optimizer.cpp(31,24): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+  Point.cpp
+  Generowanie kodu...
+  LINK : nie znaleziono elementu C:\Users\Jeremi\Source\Repos\GeneticAlgorithms\GeneticAlgorithm\x64\Debug\GeneticAlgorithm.exe ani nie został on skompilowany podczas ostatniego konsolidowania przyrostowego; zostanie wykonana pełna konsolidacja
+  GeneticAlgorithm.vcxproj -> C:\Users\Jeremi\Source\Repos\GeneticAlgorithms\GeneticAlgorithm\x64\Debug\GeneticAlgorithm.exe
+>>>>>>> 1c546babad4cc7caba9cdd2a6585f7018ae37c49

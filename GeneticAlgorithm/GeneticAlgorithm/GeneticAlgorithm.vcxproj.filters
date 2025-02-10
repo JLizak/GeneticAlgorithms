@@ -13,57 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Crossover">
+      <UniqueIdentifier>{c07e082a-e7a9-4d18-828b-a8fb3381f364}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Genetic Algorithm">
+      <UniqueIdentifier>{d27e34c2-500b-4355-a432-82ee4ee56033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Individual">
+      <UniqueIdentifier>{d03c84ad-7e16-4d8d-bb11-ca252323433e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Survival">
+      <UniqueIdentifier>{858aeef3-cfda-4600-9ba3-f91fb0861228}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Selection">
+      <UniqueIdentifier>{319dcade-ef6c-4ae4-a60f-185c720fad21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Mutation">
+      <UniqueIdentifier>{0cad47e9-3972-4456-a2ee-53e0b0a8b023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Initialization">
+      <UniqueIdentifier>{b262a13e-25ad-4471-9107-654bddfd5aa0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AdaptiveMutation.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="BasicGA.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="CrossoverStrategy.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="ClusterPreservingCrossover.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="ElitismSurvival.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="Evaluator.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="GaussianGroupingEvaluatorFactory.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="GeneticAlgorithm.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneticAlgorithmTester.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="GroupingEvaluator.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="IGeneticAlgorithm.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="IIndividualFactory.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Individual.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="InitializationStrategy.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Island.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="IslandsGA.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="MutationStrategy.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Optimizer.h">
@@ -75,32 +60,68 @@
     <ClInclude Include="PopulationPool.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="RandomIndividualFactory.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="RandomInitialization.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="RandomResettingMutation.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="RefCounter.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="SelectionStrategy.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="SmartPtr.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="SurvivalStrategy.h">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="CrossoverStrategy.h">
+      <Filter>Pliki nagłówkowe\Crossover</Filter>
+    </ClInclude>
+    <ClInclude Include="ClusterPreservingCrossover.h">
+      <Filter>Pliki nagłówkowe\Crossover</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicGA.h">
+      <Filter>Pliki nagłówkowe\Genetic Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneticAlgorithm.h">
+      <Filter>Pliki nagłówkowe\Genetic Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ElitismSurvival.h">
+      <Filter>Pliki nagłówkowe\Survival</Filter>
+    </ClInclude>
+    <ClInclude Include="AdaptiveMutation.h">
+      <Filter>Pliki nagłówkowe\Mutation</Filter>
+    </ClInclude>
+    <ClInclude Include="Individual.h">
+      <Filter>Pliki nagłówkowe\Individual</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomIndividualFactory.h">
+      <Filter>Pliki nagłówkowe\Individual</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomResettingMutation.h">
+      <Filter>Pliki nagłówkowe\Mutation</Filter>
+    </ClInclude>
+    <ClInclude Include="IGeneticAlgorithm.h">
+      <Filter>Pliki nagłówkowe\Genetic Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneticAlgorithmTester.h">
+      <Filter>Pliki nagłówkowe\Genetic Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectionStrategy.h">
+      <Filter>Pliki nagłówkowe\Selection</Filter>
     </ClInclude>
     <ClInclude Include="TournamentSelection.h">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>Pliki nagłówkowe\Selection</Filter>
+    </ClInclude>
+    <ClInclude Include="SurvivalStrategy.h">
+      <Filter>Pliki nagłówkowe\Survival</Filter>
     </ClInclude>
     <ClInclude Include="UniformCrossover.h">
-      <Filter>Pliki nagłówkowe</Filter>
+      <Filter>Pliki nagłówkowe\Crossover</Filter>
+    </ClInclude>
+    <ClInclude Include="MutationStrategy.h">
+      <Filter>Pliki nagłówkowe\Mutation</Filter>
+    </ClInclude>
+    <ClInclude Include="IIndividualFactory.h">
+      <Filter>Pliki nagłówkowe\Individual</Filter>
+    </ClInclude>
+    <ClInclude Include="InitializationStrategy.h">
+      <Filter>Pliki nagłówkowe\Initialization</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomInitialization.h">
+      <Filter>Pliki nagłówkowe\Initialization</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
