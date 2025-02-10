@@ -2,6 +2,7 @@
 #define GAUSSIAN_GROUPING_EVALUATOR_FACTORY_H
 
 #include "GroupingEvaluator.h"
+#include "Evaluator.h"
 #include "Point.h"
 
 #include <random>
@@ -57,8 +58,8 @@ namespace GA
 
 		CGaussianGroupingEvaluatorFactory& cAddDimension(double dMeanMin, double dMeanMax, double dStandardDeviationMin, double dStandardDeviationMax);
 
-		CGroupingEvaluator* pcCreateEvaluator();
-		CGroupingEvaluator* pcCreateEvaluator(unsigned int iSeed);
+		Evaluator* pcCreateEvaluator();
+		Evaluator* pcCreateEvaluator(unsigned int iSeed);
 
 	private:
 		const int i_NUMBER_OF_GROUPS_MIN_VALUE = 1;

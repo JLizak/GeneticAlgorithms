@@ -20,7 +20,7 @@ int main()
 		.cAddDimension(-100, 100, 1.0, 1.0)
 		.cAddDimension(-100, 100, 1.0, 1.0);
 
-	CGroupingEvaluator* pc_evaluator = c_evaluator_factory.pcCreateEvaluator(0);
+	Evaluator* pc_evaluator = c_evaluator_factory.pcCreateEvaluator(0);
 
 	COptimizer c_optimizer(*pc_evaluator);
 

@@ -1,66 +1,58 @@
 #include "Evaluator.h"
-#include <map>
-
+#include <cmath>
+#include "Island.h" 
 using namespace GA;
 
-Evaluator::Evaluator(int iNumberOfGroups, const vector<CPoint>& vPoints)
-	: i_number_of_groups(iNumberOfGroups), v_points(vPoints) {
+Evaluator::Evaluator(int iNumberOfGroups, const std::vector<CPoint>& vPoints)
+    : i_number_of_groups(iNumberOfGroups), v_points(vPoints) {
+    vPrecomputeDistances();
 }
 
-double Evaluator::dEvaluate(const int* piSolution) const
-{
-	if (!piSolution || v_points.empty()) return d_WRONG_VALUE;
+void Evaluator::vPrecomputeDistances() {
+    size_t n = v_points.size();
+    vv_distance_cache.resize(n, std::vector<double>(n, -1));
 
-	map<int, std::vector<size_t> > group_map;
-
-	for (size_t i = 0; i < v_points.size(); i++)
-	{
-		int group = piSolution[i];
-
-		if (group < iGetLowerBound() || group > iGetUpperBound()) return d_WRONG_VALUE;
-
-		group_map[group].push_back(i);
-	}
-
-	double d_distance_sum = 0;
-
-	map<int, vector<size_t> >::iterator it;
-	for (it = group_map.begin(); it != group_map.end(); ++it)
-	{
-		std::vector<size_t>& indices = it->second;
-		size_t group_size = indices.size();
-
-		for (size_t i = 0; i < group_size; i++)
-		{
-			for (size_t j = i + 1; j < group_size; j++)
-			{
-				double d_distance = v_points[indices[i]].dCalculateDistance(v_points[indices[j]]);
-				if (d_distance < 0) return d_WRONG_VALUE;
-
-				d_distance_sum += 2.0 * d_distance;
-			}
-		}
-	}
-
-	return d_distance_sum;
+    for (size_t i = 0; i < n; ++i) {
+        for (size_t j = i + 1; j < n; ++j) {
+            vv_distance_cache[i][j] = vv_distance_cache[j][i] = v_points[i].dCalculateDistance(v_points[j]);
+        }
+    }
 }
 
-double Evaluator::dEvaluate(const vector<int>* pvSolution) const
-{
-	if (!pvSolution)
-	{
-		return d_WRONG_VALUE;
-	}
+double Evaluator::dCalculateGroupDistance(const std::vector<int>& groupIndices) const {
+    double dGroupDistance = 0.0;
 
-	return dEvaluate(*pvSolution);
+    for (size_t i = 0; i < groupIndices.size(); ++i) {
+        for (size_t j = i + 1; j < groupIndices.size(); ++j) {
+            dGroupDistance += 2.0 * vv_distance_cache[groupIndices[i]][groupIndices[j]];
+        }
+    }
+
+    return dGroupDistance;
 }
 
-double Evaluator::dEvaluate(const vector<int>& vSolution) const
-{
-	if (vSolution.size() != v_points.size())
-	{
-		return d_WRONG_VALUE;
-	}
+double Evaluator::dEvaluate(const std::vector<int>& vSolution) const {
+    std::unordered_map<int, std::vector<int>> groups;
 
-	return dEvaluate(vSolution.data());
+    for (size_t i = 0; i < vSolution.size(); ++i) {
+        groups[vSolution[i]].push_back(static_cast<int>(i));
+    }
+
+    double dTotalFitness = 0.0;
+
+    for (const auto& group : groups) {
+        dTotalFitness += dCalculateGroupDistance(group.second);
+    }
+
+    return dTotalFitness;
+}
+
+double Evaluator::dEvaluatePartial(const std::vector<int>& vSolution, const std::unordered_map<int, std::vector<int>>& changedGroups) {
+    double deltaFitness = 0.0;
+
+    for (const auto& group : changedGroups) {
+        deltaFitness += dCalculateGroupDistance(group.second);
+    }
+
+    return deltaFitness;
 }

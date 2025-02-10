@@ -1,4 +1,5 @@
 #include "GaussianGroupingEvaluatorFactory.h"
+#include "Evaluator.h"
 
 using namespace GA;
 
@@ -75,21 +76,20 @@ CGaussianGroupingEvaluatorFactory& CGaussianGroupingEvaluatorFactory::cAddDimens
 	return *this;
 }
 
-CGroupingEvaluator* CGaussianGroupingEvaluatorFactory::pcCreateEvaluator()
+Evaluator* CGaussianGroupingEvaluatorFactory::pcCreateEvaluator()
 {
 	random_device c_seed_generator;
 
 	return pcCreateEvaluator(c_seed_generator());
 }
-
-CGroupingEvaluator* CGaussianGroupingEvaluatorFactory::pcCreateEvaluator(unsigned int iSeed)
+Evaluator* CGaussianGroupingEvaluatorFactory::pcCreateEvaluator(unsigned int iSeed)
 {
 	c_random_engine.seed(iSeed);
 
 	vector<CMultivariateGaussianDistribution>* pv_multivariate_gaussian_distributions = pv_create_multivariate_gaussian_distributions();
 	vector<CPoint>* pv_points = pv_create_points(*pv_multivariate_gaussian_distributions);
 
-	CGroupingEvaluator* pc_evaluator = new CGroupingEvaluator(i_number_of_groups, *pv_points);
+	Evaluator* pc_evaluator = new Evaluator(i_number_of_groups, *pv_points);
 
 	delete pv_multivariate_gaussian_distributions;
 	delete pv_points;

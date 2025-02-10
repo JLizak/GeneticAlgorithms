@@ -3,7 +3,7 @@
 
 using namespace GA;
 
-COptimizer::COptimizer(CGroupingEvaluator& cEvaluator)
+COptimizer::COptimizer(Evaluator& cEvaluator)
 	: c_evaluator(cEvaluator) {
 
 
@@ -12,9 +12,9 @@ COptimizer::COptimizer(CGroupingEvaluator& cEvaluator)
 	random_device rd;
 	c_random_engine.seed(rd());
 
-	int POPULATION_SIZE = 800;
-	double CROSSOVER_RATE = 0.8;
-	double MUTATION_RATE = 0.01;
+	int POPULATION_SIZE = 500;
+	double CROSSOVER_RATE = 0.9;
+	double MUTATION_RATE = 0.001;
 	int TOURNAMENT_SIZE = 2;
 	double ELITE_RATE = 0.01;
 

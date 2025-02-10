@@ -28,7 +28,9 @@ namespace GA
 	class COptimizer
 	{
 	public:
-		COptimizer(CGroupingEvaluator& cEvaluator);
+		
+
+		COptimizer(Evaluator& cEvaluator);
 
 		void vInitialize();
 		void vRunIteration();
@@ -37,7 +39,7 @@ namespace GA
 
 	private:
 		mt19937 c_random_engine;
-		CGroupingEvaluator& c_evaluator; 
+	    Evaluator& c_evaluator; 
 		double d_current_best_fitness;
 		vector<int> v_current_best;
 
