@@ -2,11 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-<<<<<<< HEAD
       <FullPath>C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\x64\Debug\GeneticAlgorithm.exe</FullPath>
-=======
-      <FullPath>C:\Users\Jeremi\Source\Repos\GeneticAlgorithms\GeneticAlgorithm\x64\Debug\GeneticAlgorithm.exe</FullPath>
->>>>>>> 1c546babad4cc7caba9cdd2a6585f7018ae37c49
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

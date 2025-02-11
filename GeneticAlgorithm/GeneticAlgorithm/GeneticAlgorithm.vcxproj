@@ -141,6 +141,8 @@
     <ClInclude Include="IIndividualFactory.h" />
     <ClInclude Include="Individual.h" />
     <ClInclude Include="InitializationStrategy.h" />
+    <ClInclude Include="Island.h" />
+    <ClInclude Include="IslandGA.h" />
     <ClInclude Include="MutationStrategy.h" />
     <ClInclude Include="EvolutionSimulator.h" />
     <ClInclude Include="Point.h" />
@@ -159,6 +161,7 @@
     <ClCompile Include="GaussianGroupingEvaluatorFactory.cpp" />
     <ClCompile Include="GeneticAlgorithm.cpp" />
     <ClCompile Include="GeneticAlgorithmTester.cpp" />
+    <ClCompile Include="IslandGA.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Individual.cpp" />
     <ClCompile Include="EvolutionSimulator.cpp" />

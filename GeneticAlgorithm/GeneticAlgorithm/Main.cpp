@@ -21,13 +21,13 @@ int main()
 
 	Evaluator* pc_evaluator = c_evaluator_factory.pcCreateEvaluator(0);
 
-	COptimizer c_optimizer(*pc_evaluator);
+	CEvolutionSimulator c_evolution_sim(*pc_evaluator);
 
-	c_optimizer.vInitialize();
+	c_evolution_sim.vInitialize();
 
 	for (int i = 0; i < 1000; i++)
 	{
-		c_optimizer.vRunIteration();
+		c_evolution_sim.vRunIteration();
 	}
 
 	delete pc_evaluator;

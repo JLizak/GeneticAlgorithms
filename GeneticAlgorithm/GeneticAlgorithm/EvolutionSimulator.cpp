@@ -1,51 +1,50 @@
 ﻿#include "EvolutionSimulator.h"
 
-
 using namespace GA;
 
-COptimizer::COptimizer(Evaluator& cEvaluator)
-	: c_evaluator(cEvaluator) {
+CEvolutionSimulator::CEvolutionSimulator(Evaluator& cEvaluator)
+    : c_evaluator(cEvaluator) {
 
+    d_current_best_fitness = numeric_limits<double>::max();
+    random_device rd;
+    c_random_engine.seed(rd());
 
-	d_current_best_fitness = numeric_limits<int>::max();
+    int POPULATION_SIZE = 500;
+    double CROSSOVER_RATE = 0.9;
+    double MUTATION_RATE = 0.001;
+    int TOURNAMENT_SIZE = 2;
+    double ELITE_RATE = 0.01;
+    int NUM_ISLANDS = 5;            // ✅ Ilość wysp
+    int MIGRATION_INTERVAL = 10;    // ✅ Częstotliwość migracji
+    int MIGRATION_SIZE = 5;         // ✅ Ilość migrujących osobników
 
-	random_device rd;
-	c_random_engine.seed(rd());
+    evaluator = make_shared<Evaluator>(cEvaluator.iGetUpperBound(), cEvaluator.vGetPoints());
+    selection = make_shared<TournamentSelection>(TOURNAMENT_SIZE, c_random_engine);
+    crossover = make_shared<UniformCrossover>(c_random_engine, evaluator);
+    mutation = make_shared<AdaptiveMutation>(cEvaluator.iGetLowerBound(), cEvaluator.iGetUpperBound(), c_random_engine);
+    initialization = make_shared<RandomInitialization>(evaluator, c_random_engine);
+    survival = shared_ptr<SurvivalStrategy>(new ElitismSurvival(ELITE_RATE, c_random_engine));
 
-	int POPULATION_SIZE = 500;
-	double CROSSOVER_RATE = 0.9;
-	double MUTATION_RATE = 0.001;
-	int TOURNAMENT_SIZE = 2;
-	double ELITE_RATE = 0.01;
+    params.populationSize = POPULATION_SIZE;
+    params.crossoverRate = CROSSOVER_RATE;
+    params.mutationRate = MUTATION_RATE;
 
-	evaluator = shared_ptr<Evaluator>(new Evaluator(c_evaluator.iGetUpperBound(), c_evaluator.vGetPoints()));
-	selection = shared_ptr<SelectionStrategy>(new TournamentSelection(TOURNAMENT_SIZE, c_random_engine));
-	crossover = shared_ptr<CrossoverStrategy>(new UniformCrossover(c_random_engine, evaluator));
-	mutation = shared_ptr<MutationStrategy>(new AdaptiveMutation(cEvaluator.iGetLowerBound(), 
-		cEvaluator.iGetUpperBound(), c_random_engine));
-	initialization = shared_ptr<InitializationStrategy>(new RandomInitialization(evaluator, c_random_engine));
-	survival = shared_ptr<SurvivalStrategy>(new ElitismSurvival(ELITE_RATE, c_random_engine));
+    operators.initialization = initialization;
+    operators.selection = selection;
+    operators.crossover = crossover;
+    operators.mutation = mutation;
+    operators.survival = survival;
 
-	params.populationSize = POPULATION_SIZE;
-	params.crossoverRate = CROSSOVER_RATE;
-	params.mutationRate = MUTATION_RATE;
-
-	operators.initialization = initialization;
-	operators.selection = selection;
-	operators.crossover = crossover;
-	operators.mutation = mutation;
-	operators.survival = survival;
-
-	geneticAlgorithm = new BasicGA(evaluator, c_random_engine, operators, params);
+    // ✅ Tworzymy IslandGA zamiast BasicGA
+    islandGA = make_shared<IslandGA>(NUM_ISLANDS, MIGRATION_INTERVAL, MIGRATION_SIZE, evaluator, c_random_engine, operators, params);
 }
 
-void COptimizer::vInitialize()
-{
-	geneticAlgorithm->initialize();
+void CEvolutionSimulator::vInitialize() {
+    islandGA->initialize();  // ✅ Wywołujemy initialize dla IslandGA
 }
 
-void COptimizer::vRunIteration() {
-	geneticAlgorithm->runIteration();
-	d_current_best_fitness = geneticAlgorithm->getBestFitness();
-	cout << d_current_best_fitness << endl;
+void CEvolutionSimulator::vRunIteration() {
+    islandGA->runIteration();  // ✅ Wywołujemy iterację dla IslandGA
+    d_current_best_fitness = islandGA->getBestIslandFitness();  // ✅ Pobieramy najlepszą fitness z wysp
+    cout << "Best Fitness: " << d_current_best_fitness << endl;
 }
