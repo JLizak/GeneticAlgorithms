@@ -12,6 +12,7 @@ namespace GA {
 		GeneticAlgorithmTester(GeneticAlgorithm geneticAlgorithm);
 		void runTest();
 		void getBestCombination();
+
 		
 	private:
 		GeneticAlgorithm* geneticAlgorithm;

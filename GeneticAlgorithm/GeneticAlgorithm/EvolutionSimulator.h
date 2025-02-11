@@ -1,5 +1,5 @@
-#ifndef OPTIMIZER_H
-#define OPTIMIZER_H
+#ifndef EvolutionSimulator_H
+#define EvolutionSimulator_H
 
 #include "Individual.h"
 #include "Evaluator.h"
@@ -17,18 +17,19 @@
 #include "GeneticAlgorithm.h"
 #include "ElitismSurvival.h"
 #include "BasicGA.h"
+#include "IslandGA.h"
 
 using namespace std;
 
 namespace GA
 {
-	class COptimizer
+	class CEvolutionSimulator
 	{
 	public:
 		
 
-		COptimizer(Evaluator& cEvaluator);
-
+		CEvolutionSimulator(Evaluator& cEvaluator);
+		shared_ptr<IslandGA> islandGA;
 		void vInitialize();
 		void vRunIteration();
 

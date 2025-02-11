@@ -3,10 +3,8 @@ C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Evaluat
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\GaussianGroupingEvaluatorFactory.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\GaussianGroupingEvaluatorFactory.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\GeneticAlgorithm.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\GeneticAlgorithm.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\GeneticAlgorithmTester.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\GeneticAlgorithmTester.obj
-C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\GroupingChallenge.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\GroupingChallenge.obj
-C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\GroupingEvaluator.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\GroupingEvaluator.obj
+C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\IslandGA.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\IslandGA.obj
+C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Main.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\Main.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Individual.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\Individual.obj
-C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Island.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\Island.obj
-C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\IslandsGA.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\IslandsGA.obj
-C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Optimizer.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\Optimizer.obj
+C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\EvolutionSimulator.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\EvolutionSimulator.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Point.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\Point.obj
