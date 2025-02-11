@@ -9,9 +9,9 @@ CEvolutionSimulator::CEvolutionSimulator(Evaluator& cEvaluator)
     random_device rd;
     c_random_engine.seed(rd());
 
-    int POPULATION_SIZE = 500;
+    int POPULATION_SIZE = 1500;
     double CROSSOVER_RATE = 0.9;
-    double MUTATION_RATE = 0.001;
+    double MUTATION_RATE = 0.01;
     int TOURNAMENT_SIZE = 2;
     double ELITE_RATE = 0.01;
     int NUM_ISLANDS = 5;            // ✅ Ilość wysp
