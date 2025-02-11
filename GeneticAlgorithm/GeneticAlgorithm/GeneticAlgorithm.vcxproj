@@ -136,6 +136,7 @@
     <ClInclude Include="GaussianGroupingEvaluatorFactory.h" />
     <ClInclude Include="GeneticAlgorithm.h" />
     <ClInclude Include="GeneticAlgorithmTester.h" />
+    <ClInclude Include="GUI.h" />
     <ClInclude Include="IGeneticAlgorithm.h" />
     <ClInclude Include="IIndividualFactory.h" />
     <ClInclude Include="Individual.h" />

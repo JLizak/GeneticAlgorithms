@@ -34,6 +34,9 @@
     <Filter Include="Pliki nagłówkowe\Initialization">
       <UniqueIdentifier>{b262a13e-25ad-4471-9107-654bddfd5aa0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\Genetic Algorithm">
+      <UniqueIdentifier>{71069ecf-1d05-42b3-9042-d9c3f4436d05}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Evaluator.h">
@@ -108,21 +111,15 @@
     <ClInclude Include="RandomInitialization.h">
       <Filter>Pliki nagłówkowe\Initialization</Filter>
     </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BasicGA.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="Evaluator.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="GaussianGroupingEvaluatorFactory.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneticAlgorithm.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneticAlgorithmTester.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
@@ -136,6 +133,15 @@
     </ClCompile>
     <ClCompile Include="Point.cpp">
       <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicGA.cpp">
+      <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneticAlgorithm.cpp">
+      <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneticAlgorithmTester.cpp">
+      <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
