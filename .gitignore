@@ -1,5 +1,33 @@
-﻿
-/.vs
-/GeneticAlgorithm/.vs/GeneticAlgorithm
-/GeneticAlgorithm/GeneticAlgorithm/x64/Debug
-/GeneticAlgorithm/x64/Debug
+﻿# Exclude Visual Studio files
+.vs/
+x64/
+*.vcxproj.user
+*.suo
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.ipch
+
+# Exclude build directories
+/build/
+/Debug/
+/Release/
+/bin/
+/obj/
+
+# Exclude compiled binaries
+*.exe
+*.dll
+*.lib
+*.obj
+*.pdb
+
+# Exclude OS-specific files
+Thumbs.db
+.DS_Store
+
+# Exclude temporary files
+*.log
+*.tmp
+*.cache
