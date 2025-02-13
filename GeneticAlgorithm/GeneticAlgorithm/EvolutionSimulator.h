@@ -29,7 +29,7 @@ namespace GA
 		
 
 		CEvolutionSimulator(Evaluator& cEvaluator);
-		shared_ptr<IslandGA> islandGA;
+		shared_ptr<GeneticAlgorithm> ga;
 		void vInitialize();
 		void vRunIteration();
 
@@ -52,8 +52,6 @@ namespace GA
 		GeneticAlgorithmParameters params;
 		GeneticOperators operators;
 
-
-		GeneticAlgorithm* geneticAlgorithm;
 		
 	};
 }

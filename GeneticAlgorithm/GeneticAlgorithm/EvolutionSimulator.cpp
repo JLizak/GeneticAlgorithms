@@ -1,5 +1,4 @@
 ﻿#include "EvolutionSimulator.h"
-
 using namespace GA;
 
 CEvolutionSimulator::CEvolutionSimulator(Evaluator& cEvaluator)
@@ -9,12 +8,12 @@ CEvolutionSimulator::CEvolutionSimulator(Evaluator& cEvaluator)
     random_device rd;
     c_random_engine.seed(rd());
 
-    int POPULATION_SIZE = 1500;
+    int POPULATION_SIZE = 900;
     double CROSSOVER_RATE = 0.9;
-    double MUTATION_RATE = 0.01;
+    double MUTATION_RATE = 0.005;
     int TOURNAMENT_SIZE = 2;
     double ELITE_RATE = 0.01;
-    int NUM_ISLANDS = 5;            // ✅ Ilość wysp
+    int NUM_ISLANDS = 3;            // ✅ Ilość wysp
     int MIGRATION_INTERVAL = 10;    // ✅ Częstotliwość migracji
     int MIGRATION_SIZE = 5;         // ✅ Ilość migrujących osobników
 
@@ -35,16 +34,18 @@ CEvolutionSimulator::CEvolutionSimulator(Evaluator& cEvaluator)
     operators.mutation = mutation;
     operators.survival = survival;
 
-    // ✅ Tworzymy IslandGA zamiast BasicGA
-    islandGA = make_shared<IslandGA>(NUM_ISLANDS, MIGRATION_INTERVAL, MIGRATION_SIZE, evaluator, c_random_engine, operators, params);
+    //islandGA = make_shared<IslandGA>(NUM_ISLANDS, MIGRATION_INTERVAL, MIGRATION_SIZE, evaluator, c_random_engine, operators, params);
+    //ga = make_shared<BasicGA>(evaluator, c_random_engine, operators, params);
+    ga = make_shared<IslandGA>(NUM_ISLANDS, MIGRATION_INTERVAL, MIGRATION_SIZE, evaluator, c_random_engine, operators, params);
 }
 
 void CEvolutionSimulator::vInitialize() {
-    islandGA->initialize();  // ✅ Wywołujemy initialize dla IslandGA
+    ga->initialize();
 }
 
 void CEvolutionSimulator::vRunIteration() {
-    islandGA->runIteration();  // ✅ Wywołujemy iterację dla IslandGA
-    d_current_best_fitness = islandGA->getBestIslandFitness();  // ✅ Pobieramy najlepszą fitness z wysp
+    ga->runIteration(); 
+    d_current_best_fitness = ga->getBestFitness(); 
+    v_current_best = ga->getBestSolution();
     cout << "Best Fitness: " << d_current_best_fitness << endl;
 }

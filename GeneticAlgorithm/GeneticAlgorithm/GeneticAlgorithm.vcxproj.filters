@@ -114,6 +114,12 @@
     <ClInclude Include="GUI.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="Island.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="IslandGA.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Evaluator.cpp">
@@ -141,6 +147,15 @@
       <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
     </ClCompile>
     <ClCompile Include="GeneticAlgorithmTester.cpp">
+      <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="PopulationPool.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="IslandGA.cpp">
       <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
     </ClCompile>
   </ItemGroup>

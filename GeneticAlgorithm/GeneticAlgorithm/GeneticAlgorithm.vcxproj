@@ -104,10 +104,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Libraries\raylib\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Libraries\raylib\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>raylib.lib
+;$(CoreLibraryDependencies);opengl32.lib
+;gdi32.lib
+;winmm.lib
+;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -118,12 +125,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:/Libraries/raylib/include
+</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:/Libraries/raylib/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>raylib.lib
+;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -161,11 +173,13 @@
     <ClCompile Include="GaussianGroupingEvaluatorFactory.cpp" />
     <ClCompile Include="GeneticAlgorithm.cpp" />
     <ClCompile Include="GeneticAlgorithmTester.cpp" />
+    <ClCompile Include="GUI.cpp" />
     <ClCompile Include="IslandGA.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Individual.cpp" />
     <ClCompile Include="EvolutionSimulator.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="PopulationPool.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

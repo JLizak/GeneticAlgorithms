@@ -9,7 +9,7 @@ Individual::Individual(const vector<int>& chromosome, double fitness) {
 
 Individual::Individual() {
 	this->chromosome = vector<int>(0);
-	this->fitness = 0;
+	this->fitness = numeric_limits<double>::max();
 }
 
 bool Individual::operator<(const Individual& other) const {

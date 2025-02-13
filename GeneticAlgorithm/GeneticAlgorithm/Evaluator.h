@@ -10,7 +10,7 @@ namespace GA
     class Evaluator
     {
     public:
-        Evaluator(int iNumberOfGroups, const std::vector<CPoint>& vPoints);
+        Evaluator(int iNumberOfGroups, const vector<CPoint>& vPoints);
 
         double dEvaluate(const std::vector<int>& vSolution) const;
         double dEvaluatePartial(const std::vector<int>& vSolution, const std::unordered_map<int, std::vector<int>>& changedGroups);

@@ -23,12 +23,8 @@ namespace GA {
             return geneticAlgorithm->select();
         }
 
-
         double getBestFitness() {
             return geneticAlgorithm->getBestFitness();
         }
-
-
-      
     };
 }

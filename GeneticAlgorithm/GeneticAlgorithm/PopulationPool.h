@@ -23,55 +23,18 @@ namespace GA {
 		
 	public:
 		PopulationPool(shared_ptr<InitializationStrategy> init, shared_ptr<SurvivalStrategy> surviv, int populationSize, shared_ptr<Evaluator> evaluator,
-		mt19937& randomEngine): randomEngine(randomEngine) {
-			population = vector<Individual>(populationSize);
-			this->populationSize = populationSize;
-			this->evaluator = evaluator;
-			bestFitness = numeric_limits<double>::max();
-			initialization = init;
-			survival = surviv;
-		}
+			mt19937& randomEngine);
 
 		PopulationPool(shared_ptr<InitializationStrategy> init, shared_ptr<SurvivalStrategy> surviv, int populationSize, shared_ptr<Evaluator> evaluator,
-			mt19937& randomEngine, vector<Individual> pop) : randomEngine(randomEngine) {
-			population = vector<Individual>(populationSize);
-			this->populationSize = populationSize;
-			this->evaluator = evaluator;
-			bestFitness = numeric_limits<double>::max();
-			initialization = init;
-			survival = surviv;
-			population = pop;
-		}
+			mt19937& randomEngine, vector<Individual> pop);
 
+		void initializePopulation();
 
+		void updatePopulation(vector<Individual> offspring);
 
-		void initializePopulation() {
-			population.clear();
+		void updateBestIndividual();
 
-			population = initialization->initialize(populationSize);
-			updateBestIndividual(initialization->getBestInitialIndividual());
-		}
-
-		double getBestFitness() { return population[0].getFitness(); }
-
-		Individual getBestIndividual() { return population[0]; }
-
-		void updatePopulation(vector<Individual> offspring) {
-			population = survival->selectSurvivors(population, offspring);
-		}
-
-		void updateBestIndividual() {
-			for (int i = 0; i < population.size(); i++) {
-				if (population[i].getFitness() > bestFitness) {
-					updateBestIndividual(population[i]);
-				}
-			}
-		}
-
-		void updateBestIndividual(Individual best) {
-			bestIndividual = best;
-			bestFitness = best.getFitness();
-		}
+		void updateBestIndividual(Individual best);
 
 		vector<Individual>& getPopulation() {
 			return population;
@@ -81,23 +44,14 @@ namespace GA {
 			return population.size();
 		}
 
-		shared_ptr<PopulationPool> getPopulationFragment(int begin, int end) {
-			int newPopulationSize = end - begin;
-			vector<Individual> newPopulation(newPopulationSize);
-
-			for (int i = 0; i < newPopulationSize; i++) {
-				newPopulation[i] = population[begin + i].copy();
-			}
-
-			return shared_ptr<PopulationPool>(new PopulationPool(initialization, survival,
-				newPopulationSize, evaluator, randomEngine, newPopulation));
+		Individual getBestIndividual() {
+			return bestIndividual;
 		}
 
-		void replaceIndividual(Individual individual, int index) {
-			population[index] = individual;
-			if (individual.getFitness() > bestFitness) {
-				updateBestIndividual(individual);
-			}
-		}
+		double getBestFitness() { return bestFitness; }
+
+		shared_ptr<PopulationPool> getPopulationFragment(int begin, int end);
+
+		void replaceIndividual(Individual individual, int index);
 	};
 }
