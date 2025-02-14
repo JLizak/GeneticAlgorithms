@@ -10,13 +10,13 @@ CEvolutionSimulator::CEvolutionSimulator(Evaluator& cEvaluator)
     c_random_engine.seed(rd());
 
     int POPULATION_SIZE = 500;
-    double CROSSOVER_RATE = 0.9;
+    double CROSSOVER_RATE = 0.99;
     double MUTATION_RATE = 0.001;
     int TOURNAMENT_SIZE = 2;
     double ELITE_RATE = 0.01;
     int NUM_ISLANDS = 5;            // ✅ Ilość wysp
     int MIGRATION_INTERVAL = 10;    // ✅ Częstotliwość migracji
-    int MIGRATION_SIZE = 5;         // ✅ Ilość migrujących osobników
+    int MIGRATION_SIZE = 1;         // ✅ Ilość migrujących osobników
 
     evaluator = make_shared<Evaluator>(cEvaluator.iGetUpperBound(), cEvaluator.vGetPoints());
     selection = make_shared<TournamentSelection>(TOURNAMENT_SIZE, c_random_engine);

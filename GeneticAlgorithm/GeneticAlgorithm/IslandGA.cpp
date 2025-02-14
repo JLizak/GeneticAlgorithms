@@ -54,7 +54,7 @@ void IslandGA::migrate() {
         }
     }
 
-    std::cout << "Migration completed!" << std::endl;
+   
 }
 
 
