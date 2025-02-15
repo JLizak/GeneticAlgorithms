@@ -120,6 +120,9 @@
     <ClInclude Include="IslandGA.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="PyramidGA.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Evaluator.cpp">
@@ -158,10 +161,13 @@
     <ClCompile Include="IslandGA.cpp">
       <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
     </ClCompile>
+    <ClCompile Include="PyramidGA.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="GeneticAlgorithmMeasureFunction.hpp">
-      <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </None>
   </ItemGroup>
 </Project>

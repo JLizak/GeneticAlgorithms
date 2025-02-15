@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\kjani\Downloads\raylib\raylib\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Libraries\raylib\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\kjani\Downloads\raylib\raylib\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Libraries\raylib\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>raylib.lib;$(CoreLibraryDependencies);opengl32.lib;gdi32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -178,12 +178,6 @@
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="PopulationPool.cpp" />
     <ClCompile Include="PyramidGA.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="GeneticAlgorithmMeasureFunction.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="GeneticAlgorithmMeasureFunction.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

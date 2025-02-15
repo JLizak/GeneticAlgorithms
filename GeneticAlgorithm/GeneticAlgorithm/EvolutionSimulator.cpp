@@ -9,18 +9,15 @@ CEvolutionSimulator::CEvolutionSimulator(Evaluator& cEvaluator)
     random_device rd;
     c_random_engine.seed(rd());
 
-
-    
-
-    int POPULATION_SIZE = 2500;
+    int POPULATION_SIZE = 500;
     double CROSSOVER_RATE = 0.99;
     double MUTATION_RATE = 0.005;
 
     int TOURNAMENT_SIZE = 4;
     double ELITE_RATE = 0.01;
-    int NUM_ISLANDS = 4;            // ✅ Ilość wysp
-    int MIGRATION_INTERVAL = 100;    // ✅ Częstotliwość migracji
-    int MIGRATION_SIZE = 1;         // ✅ Ilość migrujących osobników
+    int NUM_ISLANDS = 4;
+    int MIGRATION_INTERVAL = 100;
+    int MIGRATION_SIZE = 1;
 
     int PYRAMID_LEVELS = 6;
 
