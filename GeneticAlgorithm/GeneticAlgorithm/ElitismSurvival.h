@@ -24,15 +24,26 @@ namespace GA {
 			for (int i = 0; i < eliteSize; i++) {
 				survivors.push_back(entirePopulation[i]);
 			}
-
+			bestIndividual = survivors[0];
 			for (int i = eliteSize; i < population.size(); i++) {
-				survivors.push_back(offspring[dist(randomEngine)]);
-			}
+				Individual randomChild = offspring[dist(randomEngine)];
 
+				survivors.push_back(randomChild);
+
+				if (randomChild < bestIndividual) {
+					bestIndividual = randomChild;
+				}
+			}
+			
 			return survivors;
 		}
+
+		Individual getBestIndividual() { return bestIndividual; }
+
+		
 	private:
 		double eliteRate;
 		mt19937& randomEngine;
+		Individual bestIndividual;
 	};
 }

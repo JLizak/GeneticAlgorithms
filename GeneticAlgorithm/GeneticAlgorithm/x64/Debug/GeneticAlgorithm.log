@@ -1,5 +1,5 @@
 ﻿  EvolutionSimulator.cpp
-C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(81,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.h(44,26): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
   (kompilowanie pliku źródłowego „EvolutionSimulator.cpp”)
   
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\TournamentSelection.h(15,65): warning C4267: "argument": konwersja z "size_t" do "_Ty", możliwa utrata danych
@@ -19,6 +19,6 @@ C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Elitism
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\ElitismSurvival.h(22,18): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
   (kompilowanie pliku źródłowego „EvolutionSimulator.cpp”)
   
-C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\EvolutionSimulator.cpp(29,28): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
-C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\EvolutionSimulator.cpp(30,27): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\EvolutionSimulator.cpp(35,28): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\EvolutionSimulator.cpp(36,27): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
   GeneticAlgorithm.vcxproj -> C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\x64\Debug\GeneticAlgorithm.exe

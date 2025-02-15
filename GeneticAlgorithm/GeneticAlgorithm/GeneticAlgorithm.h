@@ -54,6 +54,8 @@ namespace GA {
 		vector<Individual> cross(Individual& parent1, Individual& parent2) override;
 		void mutate(Individual& individual) override;
 
-		double getBestFitness() { return population->getBestFitness(); }
+		virtual double getBestFitness() { return population->getBestFitness(); }
+		virtual vector<int> getBestSolution() { return population->getBestIndividual().getChromosome(); }
+		
 	};
 }

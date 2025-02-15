@@ -28,7 +28,7 @@ namespace GA {
 
                 population2.push_back(newIndividual);
 
-                if (newIndividual < bestIndividual) {
+                if (newIndividual.getFitness() < bestIndividual.getFitness()) {
                     bestFitness = newIndividual.getFitness();
                     bestIndividual = newIndividual;
                 }

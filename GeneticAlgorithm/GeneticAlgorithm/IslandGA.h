@@ -19,6 +19,7 @@ namespace GA {
         void runIteration() override;
         void initialize() override;
         void migrate();
-        double getBestIslandFitness();
+        vector<int> getBestSolution() override;
+        double getBestFitness() override;
     };
 }

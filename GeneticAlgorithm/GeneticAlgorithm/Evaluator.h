@@ -10,7 +10,7 @@ namespace GA
     class Evaluator
     {
     public:
-        Evaluator(int iNumberOfGroups, const std::vector<CPoint>& vPoints);
+        Evaluator(int iNumberOfGroups, const vector<CPoint>& vPoints);
 
         double dEvaluate(const std::vector<int>& vSolution) const;
         double dEvaluatePartial(const std::vector<int>& vSolution, const std::unordered_map<int, std::vector<int>>& changedGroups);
@@ -25,7 +25,7 @@ namespace GA
         int i_number_of_groups;
         std::vector<CPoint> v_points;
 
-        std::vector<std::vector<double>> vv_distance_cache; // Cache dla odległości
+        std::vector<std::vector<double>> vv_distance_cache;
         void vPrecomputeDistances();
         double dCalculateGroupDistance(const std::vector<int>& groupIndices) const;
     };

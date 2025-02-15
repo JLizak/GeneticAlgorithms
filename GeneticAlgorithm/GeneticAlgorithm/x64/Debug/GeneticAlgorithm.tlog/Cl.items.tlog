@@ -3,8 +3,11 @@ C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Evaluat
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\GaussianGroupingEvaluatorFactory.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\GaussianGroupingEvaluatorFactory.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\GeneticAlgorithm.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\GeneticAlgorithm.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\GeneticAlgorithmTester.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\GeneticAlgorithmTester.obj
+C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\GUI.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\GUI.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\IslandGA.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\IslandGA.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Main.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\Main.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Individual.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\Individual.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\EvolutionSimulator.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\EvolutionSimulator.obj
 C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\Point.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\Point.obj
+C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\PopulationPool.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\PopulationPool.obj
+C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\PyramidGA.cpp;C:\Users\kjani\source\repos\GENETIC_v1\GeneticAlgorithm\GeneticAlgorithm\x64\Debug\PyramidGA.obj

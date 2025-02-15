@@ -20,7 +20,7 @@ namespace GA {
 		vector<int> getChromosome();
 		void setChromosome(vector<int> chromosome);
 		int getChromosomeSize();
-		double getFitness();
+		double getFitness() const;
 		void setFitness(double fitness);
 		int getGene(int index);
 		Individual copy();

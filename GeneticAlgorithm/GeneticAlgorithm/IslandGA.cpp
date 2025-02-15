@@ -58,10 +58,22 @@ void IslandGA::migrate() {
 }
 
 
-double IslandGA::getBestIslandFitness() {
+double IslandGA::getBestFitness() {
     double bestFitness = numeric_limits<double>::max();
     for (auto& island : islands) {
         bestFitness = std::min(bestFitness, island.getBestFitness());
     }
     return bestFitness;
+}
+
+vector<int> IslandGA::getBestSolution() {
+    double bestFitness = numeric_limits<double>::max();
+    vector<int> bestSolution;
+    for (auto& island : islands) {
+        if (island.geneticAlgorithm->getBestFitness() < bestFitness) {
+            bestFitness = island.geneticAlgorithm->getBestFitness();
+            bestSolution = island.geneticAlgorithm->getBestSolution();
+        }
+    }
+    return bestSolution;
 }

@@ -20,14 +20,11 @@ void BasicGA::runIteration() {
 		offspring.insert(offspring.end(), children.begin(), children.end());
 	}
 
-	population->updatePopulation(offspring);
-
-	for (auto& child : population->getPopulation()) {
-		if (!isOffspring(child, offspring)) {
-			mutate(child);
-		}
-
+	for (auto& individual : population->getPopulation()) {
+		mutate(individual);
 	}
+
+	population->updatePopulation(offspring);
 }
 
 bool BasicGA::isOffspring(Individual individual, vector<Individual> offspring) {
