@@ -15,5 +15,8 @@ namespace GA {
 		void initialize() override;
 
 		bool isOffspring(Individual individual, vector<Individual> offspring);
+
+		vector<Individual> performCrossover(vector<Individual> parents);
+		void performMutation();
 	};
 }

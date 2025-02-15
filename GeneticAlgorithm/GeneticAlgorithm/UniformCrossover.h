@@ -12,19 +12,27 @@ namespace GA {
         }
 
         vector<Individual> cross(Individual& parent1, Individual& parent2) {
+            int chromosomeSize = parent1.getChromosomeSize();
+
             vector<int> child1Chromosome;
             vector<int> child2Chromosome;
+            child1Chromosome.reserve(chromosomeSize);
+            child2Chromosome.reserve(chromosomeSize);
 
             uniform_int_distribution<int> binaryDist(0, 1);
 
-            for (int i = 0; i < parent1.getChromosomeSize(); i++) {
+            for (int i = 0; i < chromosomeSize; i++) {
+
+                int gene1 = parent1.getGene(i);
+                int gene2 = parent2.getGene(i);
+
                 if (binaryDist(c_random_engine) == 0) {
-                    child1Chromosome.push_back(parent1.getGene(i));
-                    child2Chromosome.push_back(parent2.getGene(i));
+                    child1Chromosome.push_back(gene1);
+                    child2Chromosome.push_back(gene2);
                 }
                 else {
-                    child1Chromosome.push_back(parent2.getGene(i));
-                    child2Chromosome.push_back(parent1.getGene(i));
+                    child1Chromosome.push_back(gene2);
+                    child2Chromosome.push_back(gene1);
                 }
             }
 

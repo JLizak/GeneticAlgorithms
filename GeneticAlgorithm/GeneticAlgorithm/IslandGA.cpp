@@ -1,7 +1,7 @@
 ﻿#include "IslandGA.h"
 #include <algorithm>
 #include <iostream>
-
+#include <thread>
 using namespace GA;
 
 IslandGA::IslandGA(int numIslands, int migrationInterval, int migrationSize,
@@ -29,8 +29,15 @@ void IslandGA::runIteration() {
 
     static int iterationCount = 0;
     if (++iterationCount % migrationInterval == 0) {
+        auto start = chrono::high_resolution_clock::now();
         migrate();
+        auto end = chrono::high_resolution_clock::now();
+
+        chrono::duration<double, milli> elapsed = end - start;
+        cout << "Time of migration: " << elapsed.count() << " milliseconds" << endl;
     }
+    cout << endl << endl;
+    this_thread::sleep_for(std::chrono::milliseconds(500));
 }
 
 void IslandGA::migrate() {

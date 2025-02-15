@@ -1,4 +1,6 @@
 #include "PopulationPool.h"
+#include <chrono>
+#include <iostream>
 
 using namespace GA;
 
@@ -31,7 +33,13 @@ void PopulationPool::initializePopulation() {
 }
 
 void PopulationPool::updatePopulation(vector<Individual> offspring) {
+	auto start = chrono::high_resolution_clock::now();
 	population = survival->selectSurvivors(population, offspring);
+	auto end = chrono::high_resolution_clock::now();
+
+	chrono::duration<double, milli> elapsed = end - start;
+	cout << "Time of survival: " << elapsed.count() << " milliseconds" << endl;
+
 	updateBestIndividual();
 }
 

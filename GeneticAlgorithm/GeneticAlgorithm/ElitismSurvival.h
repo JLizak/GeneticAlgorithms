@@ -21,7 +21,7 @@ namespace GA {
 
 			int eliteSize = eliteRate * population.size();
 
-			for (int i = 0; i < eliteSize; i++) {
+			for (int i = 0; i < eliteSize; i++) {	
 				survivors.push_back(entirePopulation[i]);
 			}
 			bestIndividual = survivors[0];

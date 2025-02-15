@@ -1,5 +1,5 @@
 #include "BasicGA.h"
-
+#include <iostream>
 using namespace GA;
 
 BasicGA::BasicGA(shared_ptr<Evaluator> evaluator, mt19937 randomEngine,
@@ -8,23 +8,22 @@ BasicGA::BasicGA(shared_ptr<Evaluator> evaluator, mt19937 randomEngine,
 }
 
 void BasicGA::runIteration() {
-	vector<Individual> parents = select();
-	vector<Individual> offspring;
+	
+	vector<Individual> parents = measureAndDoFunction<vector<Individual>>(
+		[this]() { return select(); }, "Selection"
+	);
 
-	for (size_t i = 0; i < parents.size(); i += 2) {
-		Individual parent1 = parents[i];
-		Individual parent2 = (i + 1 < parents.size()) ? parents[i + 1] : parents[i];
+	vector<Individual> offspring = measureAndDoFunction<vector<Individual>>(
+		[this, &parents]() { return performCrossover(parents); }, "Crossover"
+	);
 
-		vector<Individual> children = cross(parent1, parent2);
+	measureAndDoFunction(
+		[this]() {return performMutation(); }, "Mutation"
+	);
 
-		offspring.insert(offspring.end(), children.begin(), children.end());
-	}
-
-	for (auto& individual : population->getPopulation()) {
-		mutate(individual);
-	}
-
-	population->updatePopulation(offspring);
+	measureAndDoFunction(
+		[this, &offspring]() { return population->updatePopulation(offspring); }, "Selection"
+	);
 }
 
 bool BasicGA::isOffspring(Individual individual, vector<Individual> offspring) {
@@ -38,4 +37,25 @@ bool BasicGA::isOffspring(Individual individual, vector<Individual> offspring) {
 
 void BasicGA::initialize() {
 	population->initializePopulation();
+}
+
+vector<Individual> BasicGA::performCrossover(vector<Individual> parents) {
+	vector<Individual> offspring;
+
+	for (size_t i = 0; i < parents.size(); i += 2) {
+		Individual parent1 = parents[i];
+		Individual parent2 = (i + 1 < parents.size()) ? parents[i + 1] : parents[i];
+
+		vector<Individual> children = cross(parent1, parent2);
+
+		offspring.insert(offspring.end(), children.begin(), children.end());
+	}
+
+	return offspring;
+}
+
+void BasicGA::performMutation() {
+	for (auto& individual : population->getPopulation()) {
+		mutate(individual);
+	}
 }

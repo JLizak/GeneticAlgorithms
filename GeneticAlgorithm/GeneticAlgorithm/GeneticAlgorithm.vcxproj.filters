@@ -159,4 +159,9 @@
       <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="GeneticAlgorithmMeasureFunction.hpp">
+      <Filter>Pliki źródłowe\Genetic Algorithm</Filter>
+    </None>
+  </ItemGroup>
 </Project>

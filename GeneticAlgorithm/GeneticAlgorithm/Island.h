@@ -1,5 +1,6 @@
 #pragma once
 #include "BasicGA.h"
+#include <iostream>
 
 namespace GA {
     struct Island {
@@ -12,6 +13,7 @@ namespace GA {
         }
 
         void runIteration() {
+            cout << "Island " << id << endl;
             geneticAlgorithm->runIteration();
         }
 

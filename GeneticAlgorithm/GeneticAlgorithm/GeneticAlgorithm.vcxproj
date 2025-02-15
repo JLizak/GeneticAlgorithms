@@ -179,6 +179,12 @@
     <ClCompile Include="PopulationPool.cpp" />
     <ClCompile Include="PyramidGA.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="GeneticAlgorithmMeasureFunction.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GeneticAlgorithmMeasureFunction.hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

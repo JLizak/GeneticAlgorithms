@@ -1,4 +1,6 @@
 #include "GeneticAlgorithm.h"
+#include <chrono>
+#include <iostream>
 
 using namespace GA;
 
@@ -21,9 +23,12 @@ vector<Individual> GeneticAlgorithm::select() {
 }
 
 vector<Individual> GeneticAlgorithm::cross(Individual& parent1, Individual& parent2) {
-	return operators.crossover->cross(parent1, parent2);
+	vector<Individual> result  =  operators.crossover->cross(parent1, parent2);
+
+	return result;
 }
 
 void GeneticAlgorithm::mutate(Individual& individual) {
 	operators.mutation->mutate(individual, parameters.mutationRate);
 }
+
