@@ -22,7 +22,7 @@ void BasicGA::runIteration() {
 	);
 
 	measureAndDoFunction(
-		[this, &offspring]() { return population->updatePopulation(offspring); }, "Selection"
+		[this, &offspring]() { return population->updatePopulation(offspring); }, "Survival"
 	);
 }
 

@@ -55,8 +55,12 @@ void CEvolutionSimulator::vInitialize() {
 }
 
 void CEvolutionSimulator::vRunIteration() {
-    ga->runIteration(); 
+    ga->measureAndDoFunction(
+        [this]() {return ga->runIteration(); }, "Iteration: "
+    );
+    
     d_current_best_fitness = ga->getBestFitness(); 
     v_current_best = ga->getBestSolution();
     cout << "Best Fitness: " << d_current_best_fitness << endl;
+    cout << endl << endl;
 }

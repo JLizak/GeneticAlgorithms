@@ -23,9 +23,7 @@ vector<Individual> GeneticAlgorithm::select() {
 }
 
 vector<Individual> GeneticAlgorithm::cross(Individual& parent1, Individual& parent2) {
-	vector<Individual> result  =  operators.crossover->cross(parent1, parent2);
-
-	return result;
+	return operators.crossover->cross(parent1, parent2);
 }
 
 void GeneticAlgorithm::mutate(Individual& individual) {

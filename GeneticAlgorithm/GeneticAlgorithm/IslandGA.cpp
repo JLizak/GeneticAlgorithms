@@ -36,7 +36,7 @@ void IslandGA::runIteration() {
         chrono::duration<double, milli> elapsed = end - start;
         cout << "Time of migration: " << elapsed.count() << " milliseconds" << endl;
     }
-    cout << endl << endl;
+    
     this_thread::sleep_for(std::chrono::milliseconds(500));
 }
 
